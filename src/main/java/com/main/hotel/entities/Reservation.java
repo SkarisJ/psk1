@@ -20,6 +20,7 @@ public class Reservation {
 
     private Date startDate;
     private Date endDate;
+
     @ManyToMany
     private List<Room> reservedRooms;
 }

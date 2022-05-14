@@ -9,7 +9,9 @@
     <h2>Hotels:</h2>
     <ol>
         <ui:repeat value="#{hotels.allHotels}" var="hotel">
-            <li><h:link value="#{hotel.name}" outcome="rooms?hotelId=#{hotel.id}"/></li>
+            <li>
+                <h:link value="#{hotel.name}" outcome="rooms?hotelId=#{hotel.id}"/>
+            </li>
         </ui:repeat>
     </ol>
     <h:form>

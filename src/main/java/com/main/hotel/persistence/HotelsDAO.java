@@ -23,6 +23,10 @@ public class HotelsDAO {
         return em.find(Hotel.class, id);
     }
 
+    public Hotel update(Hotel hotel){
+        return em.merge(hotel);
+    }
+
     public void persist(Hotel hotel){
         this.em.persist(hotel);
     }

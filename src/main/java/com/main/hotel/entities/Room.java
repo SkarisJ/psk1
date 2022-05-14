@@ -17,7 +17,12 @@ public class Room {
     private int id;
 
     private int number;
+    @Version
+    @Column(name = "OPT_LOCK_VERSION")
+    private Integer version;
     @ManyToOne
     @JoinColumn(name = "HOTEL_ID")
     private Hotel hotel;
+
+
 }

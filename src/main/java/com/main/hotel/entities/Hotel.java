@@ -27,6 +27,9 @@ public class Hotel implements Serializable {
     private String address;
     @OneToMany(mappedBy = "hotel", fetch = FetchType.EAGER)
     private List<Room> rooms;
+    @Version
+    @Column(name = "OPT_LOCK_VERSION")
+    private Integer version;
 
     @Override
     public boolean equals(Object o) {

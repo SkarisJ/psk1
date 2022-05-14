@@ -17,11 +17,13 @@
     </ol>
     <h:form>
         <h:inputText value="#{hotelRooms.roomToCreate.number}" required="true"/>
+        <br/>
         <h:commandButton value="Add new room" action="#{hotelRooms.createRoom}">
             <f:param name="hotelId" value="#{hotelRooms.hotel.id}"/>
         </h:commandButton>
     </h:form>
     <br/>
+    <h:link value="Update hotel: #{hotelRooms.hotel.name}" outcome="HotelDetails?hotelId=#{hotelRooms.hotel.id}" />
     <h:link value="Main page" outcome="/index"/>
 </h:body>
 </html>

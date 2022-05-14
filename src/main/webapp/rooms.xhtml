@@ -23,6 +23,8 @@
         </h:commandButton>
     </h:form>
     <br/>
+    <h:link value="Update hotel: #{hotelRooms.hotel.name}" outcome="HotelDetails?hotelId=#{hotelRooms.hotel.id}" />
+    <br/>
     <h:link value="Main page" outcome="/index"/>
 </h:body>
 </html>
