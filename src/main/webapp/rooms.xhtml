@@ -23,6 +23,13 @@
         </h:commandButton>
     </h:form>
     <br/>
+    <h:form>
+        <h:outputText value="#{generateRoomNumber.roomGenerationStatus}" />
+        <h:commandButton value="Generate player number?" disabled="#{generateRoomNumber.roomGenerationRunning}" action="#{generateRoomNumber.generateRoomNumber()}">
+            <f:param name="hotelId" value="#{hotelRooms.hotel.id}" />
+        </h:commandButton>
+    </h:form>
+    <br/>
     <h:link value="Update hotel: #{hotelRooms.hotel.name}" outcome="HotelDetails?hotelId=#{hotelRooms.hotel.id}" />
     <br/>
     <h:link value="Main page" outcome="/index"/>
