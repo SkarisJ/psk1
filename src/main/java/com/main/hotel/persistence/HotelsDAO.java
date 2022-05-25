@@ -28,6 +28,6 @@ public class HotelsDAO {
     }
 
     public void persist(Hotel hotel){
-        this.em.persist(hotel);
+        em.persist(hotel);
     }
 }

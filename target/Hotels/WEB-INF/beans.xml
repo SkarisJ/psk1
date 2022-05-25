@@ -9,4 +9,15 @@
     <interceptors>
         <class>com.main.hotel.interceptors.MethodLogger</class>
     </interceptors>
+
+    <alternatives>
+        <class>com.main.hotel.services.SlowRoomNumberGenerator</class>
+    </alternatives>
+
+    <decorators>
+        <class>
+            com.main.hotel.services.RoomNameGeneratorDecorator
+        </class>
+    </decorators>
+
 </beans>

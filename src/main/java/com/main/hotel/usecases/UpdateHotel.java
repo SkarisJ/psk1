@@ -29,7 +29,6 @@ public class UpdateHotel implements Serializable {
 
     @PostConstruct
     private void init() {
-        System.out.println("UpdateHotel INIT CALLED");
         Map<String, String> requestParams = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
         int hotelId = Integer.parseInt(requestParams.get("hotelId"));
         this.hotel = hotelsDAO.findOne(hotelId);
